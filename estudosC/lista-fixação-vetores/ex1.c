@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 // EX 1
 // int main(){
@@ -240,6 +241,119 @@
 // }
 
 // EX 11
-int main(){
+// int main(){
+//     char nome1[50], nome2[50];
     
-}
+//     printf("Digite o nome do primeiro usuario: ");
+//     fgets(nome1, sizeof(nome1), stdin);
+    
+//     printf("Digite o nome do segundo usuario: ");
+//     fgets(nome2, sizeof(nome2), stdin);
+    
+//     if (tolower(strcmp(nome1, nome2)) == 0){
+//         printf("Os dois nomes sao iguais.");
+//     }
+//     else{
+//         printf("Os dois nomes sao diferentes.");
+//     }
+
+//     return 0;
+// }
+
+// EX 12
+// int main(){
+//     int qtdVogais = 0, qtdEspaco = 0, tamanho;
+//     char frase[100];
+//     tamanho = strlen(frase);
+//     printf("Digite a frase: ");
+//     fgets(frase, sizeof(frase), stdin);
+    
+//     for (int i = 0; i < tamanho; i++){
+//         if (tolower(frase[i]) == 'a' || tolower(frase[i]) == 'e' || tolower(frase[i]) == 'i' || tolower(frase[i]) == 'o' || tolower(frase[i]) == 'u'){
+//             qtdVogais += 1;
+//         }
+//     }
+//     for (int i = 0; i < tamanho; i++){
+//         if (frase[i] == ' '){
+//             qtdEspaco += 1;
+//         }
+//     }
+//     printf("Quantidade de Vogais: %d");
+//     printf("Quantidade de Espacos: %d");
+//     printf("Tamanho da frase: %d");
+// }
+
+// EX 14
+
+
+
+// DESAFIO 1
+// int main() {
+//     int matricula[7];
+//     float media[7];
+//     float maiorMedia;
+//     int posMaior = 0;
+    
+//     for (int i = 0; i < 7; i++) {
+//         printf("Matricula do aluno %d: ", i);
+//         scanf("%d", &matricula[i]);
+        
+//         printf("Media do aluno %d: ", i);
+//         scanf("%f", &media[i]);
+        
+//         if (i == 0 || media[i] > maiorMedia) {
+//             maiorMedia = media[i];
+//             posMaior = i;
+//         }
+//     }
+    
+//     printf("Aluno com maior media: matricula %d - media %.2f\n", matricula[posMaior], maiorMedia);
+    
+//     printf("Alunos que precisam de exame:\n");
+//     for (int i = 0; i < 7; i++) {
+//         if (media[i] < 7) {
+//         float notaExame = 10 - media[i];
+        
+//         printf("Matricula %d - nota minima no exame: %.2f\n", matricula[i], notaExame);
+//         }
+//     }
+    
+//     return 0;
+//}
+
+// DESAFIO 2
+// int main(){
+//     int vendedores[10], posMaior, posMenor;
+//     float valorTotalVendidoPorVendedor[10], percentualComissao[10], comissao[10], maiorComissao, menorComissao, totalVendido = 0;
+
+//     for (int i = 0; i < 10; i++){
+//         printf("Digite o codigo do vendedor: ");
+//         scanf("%d", &vendedores[i]);
+
+//         printf("Digite o valor total vendido por este vendedor: ");
+//         scanf("%f", &valorTotalVendidoPorVendedor[i]);
+
+//         printf("Digite o percentual de comissao para este vendedor: ");
+//         scanf("%f", &percentualComissao[i]);
+
+//         totalVendido += valorTotalVendidoPorVendedor[i];
+
+//         comissao[i] = valorTotalVendidoPorVendedor[i] * percentualComissao[i] / 100;
+//         if(i == 0 || comissao[i] > maiorComissao){
+//             maiorComissao = comissao[i];
+//             posMaior = i;
+//         }
+//         if(i == 0 || comissao[i] < menorComissao){
+//             menorComissao = comissao[i];
+//             posMenor = i;
+//         }
+//     }
+
+//     for (int i = 0; i < 10; i++){
+//         printf("Codigo do vendedor: %d\n", vendedores[i]);
+//         printf("Valor da comissao: %.2f\n", comissao[i]);
+//     }
+//     printf("Valor total vendido: %.2f\n", totalVendido);
+//     printf("Maior valor de comissao: %.2f\nCodigo de quem ira receber: %d\n", maiorComissao, vendedores[posMaior]);
+//     printf("Menor valor de comissao: %.2f\nCodigo de quem ira receber: %d\n", menorComissao, vendedores[posMenor]);
+// }

@@ -87,5 +87,87 @@
 
 // EXERCICIO 6
 int main(){
+    int n1, n2, n3, n4, n5, n6, n7, n8, n9, n10;
+    int somaPares = 0, somaImpares = 0, intervalo30e90 = 0;
+
+    printf("Digite o numero: ");
+    scanf("%d", &n1);
+    printf("Digite o numero: ");
+    scanf("%d", &n2);
+    printf("Digite o numero: ");
+    scanf("%d", &n3);
+    printf("Digite o numero: ");
+    scanf("%d", &n4);
+    printf("Digite o numero: ");
+    scanf("%d", &n5);
+    printf("Digite o numero: ");
+    scanf("%d", &n6);
+    printf("Digite o numero: ");
+    scanf("%d", &n7);
+    printf("Digite o numero: ");
+    scanf("%d", &n8);
+    printf("Digite o numero: ");
+    scanf("%d", &n9);
+    printf("Digite o numero: ");
+    scanf("%d", &n10);
+
+    if (n1 % 2 == 0){
+        somaPares += n1;
+    } else{
+        somaImpares += n1;
+    }
     
+    if (n2 % 2 == 0){
+        somaPares += n2;
+    } else{
+        somaImpares += n2;
+    }
+    
+    if (n3 % 2 == 0){
+        somaPares += n3;
+    } else{
+        somaImpares += n3;
+    }
+    
+    if (n4 % 2 == 0){
+        somaPares += n4;
+    } else{
+        somaImpares += n4;
+    }
+    
+    if (n5 % 2 == 0){
+        somaPares += n5;
+    } else{
+        somaImpares += n5;
+    }
+    
+    if (n6 % 2 == 0){
+        somaPares += n6;
+    } else{
+        somaImpares += n6;
+    }
+    
+    if (n7 % 2 == 0){
+        somaPares += n7;
+    } else{
+        somaImpares += n7;
+    }
+    
+    if (n8 % 2 == 0){
+        somaPares += n8;
+    } else{
+        somaImpares += n8;
+    }
+
+    if (n9 % 2 == 0){
+        somaPares += n9;
+    } else{
+        somaImpares += n9;
+    }
+
+    if (n10 % 2 == 0){
+        somaPares += n10;
+    } else{
+        somaImpares += n10;
+    }
 }
