@@ -38,3 +38,25 @@
 //     imprimirDestino(d);
 
 // }
+
+// EX 3
+// typedef struct Aluno{
+//     char nome[30];
+//     float notas[3];
+// } Aluno;
+
+// void imprimirNotas(struct Aluno a){
+//     printf("=== Informacoes ==\n");
+//     printf("Nome: %s\n", a.nome);
+//     for (int i = 0; i < 3; i++){
+//         printf("Nota %d: %.2f\n", (i + 1), a.notas[i]);
+//     }
+// }
+
+// int main(){
+//     Aluno a = {
+//         "Carlos",
+//         {7.5, 8.0, 9.0}
+//     };
+//     imprimirNotas(a);
+// }
