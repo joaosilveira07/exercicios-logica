@@ -86,3 +86,30 @@
 
 //     printf("%s\n", (risco) ? "Em risco." : "Nao esta em risco!");
 // }
+
+// EX 5
+// typedef struct{
+//     char titulo[40];
+//     int paginas;
+//     float preco;
+// } Livro;
+
+// void imprimirLivros(Livro livros[4]){
+//     for (int i = 0; i < 4; i++){
+//         printf("Titulo: %s\n", livros[i].titulo);
+//         printf("Paginas: %d\n", livros[i].paginas);
+//         printf("Preco: %.2f\n", livros[i].preco);
+//         printf("\n");
+//     }
+// }
+
+// int main(){
+//     Livro livros[4] = {
+//         {"O Hobbit", 310, 45.90},
+//         {"Dom Casmurro", 256, 29.90},
+//         {"1984", 328, 39.50},
+//         {"O Cortico", 240, 24.9}
+//     };
+
+//     imprimirLivros(livros);
+// }
