@@ -60,3 +60,29 @@
 //     };
 //     imprimirNotas(a);
 // }
+
+// EX 4
+// typedef struct {
+//     char nome[30];
+//     float temperatura;
+//     float saturacao;
+// } Paciente;
+
+// bool emRisco (Paciente p){
+//     if (p.temperatura >= 39 || p.saturacao < 92){
+//         return true;
+//     }
+//     return false;
+// }
+
+// int main(){
+//     Paciente p = {
+//         "Jose",
+//         38,
+//         93
+//     };
+//     bool risco;
+//     risco = emRisco(p);
+
+//     printf("%s\n", (risco) ? "Em risco." : "Nao esta em risco!");
+// }
