@@ -145,3 +145,66 @@
 //  energia = 35;  bonus = 15; *p 35 &energia; *q 35 &energia; 
 
 // EX 5
+// void alterar(int *x){
+//     *x = *x + 10;
+// }
+
+// int main(){
+//     int a = 5;
+//     alterar(&a);
+//     printf("%d\n", a);
+
+//     return 0;
+// } O programa executará normalmente porém o valor de a permanecerá em 5
+
+// EX 6
+// int main(){
+//     int x = 10;
+//     int *p = &x;
+
+//     *p += 5;
+
+//     printf("%d\n", *p);
+
+//     return 0;
+// }
+
+// EX 7
+// Sobre ponteiros em C, é incorreto afirmar que:
+// A) Uma função pode alterar o valor de uma variável externa a ela se receber o endereço dessa variável
+// B) Ponteiros podem ser usados com variáveis de qualquer tipo
+// C) Um ponteiro armazena um endereço de memória, que pode ser obtido com o operador &
+// D) Ponteiros podem ser modificados para apontar para diferentes endereços
+// E) Ao utilizar um vetor como parâmetro de uma função, é disponibilizada à função uma cópia do seu primeiro elemento
+//
+
+// EX 8
+typedef struct {
+    char nome[20];
+    float nota1;
+    float nota2;
+} Aluno;
+
+float calcularMedia(Aluno a){
+    return (a.nota1 + a.nota2) / 2.0;
+}
+
+int main(){
+    Aluno turma[3] = {
+        {"Ana", 10.0, 5.0},
+        {"Bruno", 6.0, 5.0},
+        {"Carla", 9.0, 8.0}
+    };
+
+    int maior = 0;
+
+    for (int i = 0; i < 3; i++){
+        if (calcularMedia(turma[i]) > calcularMedia(turma[maior])){
+            maior = i;
+        }
+    }
+
+    printf("%s %.1f\n", turma[maior].nome, calcularMedia(turma[maior]));
+
+    return 0;
+}
