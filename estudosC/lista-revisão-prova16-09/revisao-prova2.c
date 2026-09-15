@@ -277,3 +277,136 @@
 
 //     printf("%d %d", a, b);
 // }
+
+// Structs
+// EX 1
+// typedef struct{
+//     char nome[30];
+//     float preco;
+// } Produto;
+
+// int main(){
+//     Produto p = {
+//         {"Joao"}, 139.9
+//     };
+
+//     printf("Nome: %s\n", p.nome);
+//     printf("Preco: %.2f\n", p.preco);
+// }
+
+// EX 2
+// struct produtos{
+//     char nome[30];
+//     float preco;
+// } Produtos[3] = {
+//     {"Shampoo", 35.90},
+//     {"Condicionador", 12.90},
+//     {"Desodorante", 20.0}
+// };
+
+// int main(){
+//     for (int i = 0; i < 3; i++){
+//         printf("Nome: %s\n", Produtos[i].nome);
+//         printf("Preco: %.2f\n", Produtos[i].preco);
+//     }
+// }
+
+// EX 3
+// struct Endereco {
+//     char rua[50];
+//     char cidade[40];
+// };
+
+// struct Cliente {
+//     char nome[40];
+//     int idade;
+//     struct Endereco endereco;
+// };
+
+// int main(){
+//     struct Cliente c;
+    
+//     printf("Digite o nome do cliente: ");
+//     scanf("%39s", c.nome);
+//     printf("Digite a idade do cliente: ");
+//     scanf("%d", &c.idade);
+//     printf("Digite a rua do cliente: ");
+//     scanf("%49s", c.endereco.rua);
+//     printf("Digite a cidade do cliente: ");
+//     scanf("%39s", c.endereco.cidade);
+
+//     printf("Nome: %s\n", c.nome);
+//     printf("Idade: %d\n", c.idade);
+//     printf("Rua: %s\n", c.endereco.rua);
+//     printf("Cidade: %s\n", c.endereco.cidade);
+// }
+
+// EX 4
+// struct Endereco {
+//     char rua[50];
+//     char cidade[40];
+// };
+
+// typedef struct {
+//     char nome[30];
+//     float salario;
+//     struct Endereco endereco;
+// } Funcionario;
+
+// Funcionario equipes[4] = {
+//     {"Jose", 2000.0, {"Cactos", "Americana"}},
+//     {"Luiz", 15000.0, {"Ipe", "Paulinia"}},
+//     {"Joao", 4500.20, {"Carioba", "Limeira"}},
+//     {"Ana", 8500.90, {"Munhoz", "Campinas"}}
+// };
+
+// float somaSalarios(int n){
+//     float soma = 0.0;
+
+//     for (int i = 0; i < 4; i++){
+//         soma += equipes[i].salario;
+//     }
+
+//     return soma;
+// }
+
+// EX 5
+struct tipo_instituicao {
+    char nome[30];
+    char tipo[20];
+};
+
+struct tipo_investimento {
+    char nome[30];
+    float valor_aplicado;
+    float taxa_rendimento;
+    struct tipo_instituicao instituicao;
+    float rendimentos[3];
+} Investimento[4] = {
+    {"Tesouro Selic", 1500.00, 13.25, {"Banco Federal", "Banco"}, {14.50, 15.20, 14.80}},
+    
+    {"CDB Premium", 3200.50, 12.10, {"InvestMais", "Corretora"}, {30.10, 31.50, 29.90}},
+    
+    {"LCI Azul", 2800.75, 10.80, {"Banco Azul", "Banco"}, {22.40, 21.80, 23.10}},
+    
+    {"Fundo Alpha", 5000.00, 14.50, {"Alpha Invest", "Gestora"}, {48.00, 50.25, 47.90}}
+};
+
+void maiorSoma(char *pNome[], float *pMaiorSoma){
+    float soma = 0.0, maiorSoma;
+    int maior = 0;
+
+    for (int i = 0; i < 4; i++){
+        soma = 0.0;
+        for (int j = 0; j < 3; j++) {
+            soma += Investimento[i].rendimentos[j];
+        }
+        if (i == 0 || soma > maiorSoma){
+            maiorSoma = soma;
+            maior = i;
+        }
+    }
+
+    *pNome = Investimento[maior].nome;
+    *pMaiorSoma = maiorSoma;
+}
