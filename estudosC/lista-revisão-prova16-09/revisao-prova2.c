@@ -179,32 +179,101 @@
 //
 
 // EX 8
-typedef struct {
-    char nome[20];
-    float nota1;
-    float nota2;
-} Aluno;
+// typedef struct {
+//     char nome[20];
+//     float nota1;
+//     float nota2;
+// } Aluno;
 
-float calcularMedia(Aluno a){
-    return (a.nota1 + a.nota2) / 2.0;
-}
+// float calcularMedia(Aluno a){
+//     return (a.nota1 + a.nota2) / 2.0;
+// }
 
-int main(){
-    Aluno turma[3] = {
-        {"Ana", 10.0, 5.0},
-        {"Bruno", 6.0, 5.0},
-        {"Carla", 9.0, 8.0}
-    };
+// int main(){
+//     Aluno turma[3] = {
+//         {"Ana", 10.0, 5.0},
+//         {"Bruno", 6.0, 5.0},
+//         {"Carla", 9.0, 8.0}
+//     };
 
-    int maior = 0;
+//     int maior = 0;
 
-    for (int i = 0; i < 3; i++){
-        if (calcularMedia(turma[i]) > calcularMedia(turma[maior])){
-            maior = i;
-        }
-    }
+//     for (int i = 0; i < 3; i++){
+//         if (calcularMedia(turma[i]) > calcularMedia(turma[maior])){
+//             maior = i;
+//         }
+//     }
 
-    printf("%s %.1f\n", turma[maior].nome, calcularMedia(turma[maior]));
+//     printf("%s %.1f\n", turma[maior].nome, calcularMedia(turma[maior]));
 
-    return 0;
-}
+//     return 0;
+// }
+
+// LISTA DE EX GERADO POR IA
+// PONTEIROS BÁSICOS
+
+// EX 1
+// int main(){
+//     int x = 7, *p = &x;
+
+//     printf("Valor de x pelo ponteiro: %d", *p);
+// }
+
+// EX 2
+// void dobrar(int *n){
+//     *n = *n * 2;
+// }
+
+// int main(){
+//     int num = 10;
+
+//     printf("Antes da funcao: %d\n", num);
+//     dobrar(&num);
+//     printf("Depois da funcao: %d\n", num);
+// }
+
+// EX 3
+// void trocar(int *a, int *b){
+//     int *c = a;
+
+//     printf("Valor de A: %d\n", *a);
+//     printf("Valor de B: %d\n", *b);
+
+//     a = b;
+//     b = c;
+
+//     printf("Valor de A: %d\n", *a);
+//     printf("Valor de B: %d\n", *b);
+// }
+
+// int main(){
+//     int x = 3, y = 9;
+//     trocar(&x, &y);
+// }
+
+// EX 4
+// void ajustarTemperatura(float *temp, float variacao){
+//     *temp += variacao;
+// }
+
+// int main(){
+//     float temp = 22.5, *p = &temp;
+//     float variacao = 2;
+
+//     ajustarTemperatura(p, variacao);
+//     printf("%.2f", temp);
+// }
+
+// EX 5
+// int main(){
+//     int a = 20, b = 5;
+//     int *p = &a;
+//     int *q = &b;
+
+//     *p = *p - *q;
+//     q = p;
+//     *q += 10;
+//     b = b * 2;
+
+//     printf("%d %d", a, b);
+// }
