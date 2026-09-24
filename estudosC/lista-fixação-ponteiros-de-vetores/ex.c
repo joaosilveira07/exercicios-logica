@@ -122,4 +122,44 @@
 // }
 
 // EX 11
-// CONTINUAR AMANHÃ
+// int main(){
+//   char codigos[3] = {'A', 'B', 'C'};
+//   char *p = codigos;
+//   printf("Primeiro char: %c\n", *p);
+//   printf("Segundo char: %c\n", *(p+1));
+//   printf("Terceiro char: %c\n", *(p+2));
+//   *(p + 2) = 'C';
+//   printf("[");
+//   for (int i = 0; i < 3; i++){
+//     printf("%c, ", *p);
+//     p++;
+//   }
+//   printf("]");
+// }
+
+// EX 12
+// int main(){
+//   char palavra[] = "Sol";
+// } // a) o valor armazenado em p é o endereço de memória do primeiro elemento do vetor; b) o valor de *p é S; c) o valor de *(p+1) é o; d) o valor de *(p+2) é l;
+//      e) O que existe em *(p + 3). R: Em *(p+3) contém o caractere nulo.
+
+// EX 13
+// int main(){
+//   char nome[] = "Lua";
+//   char *p = nome;
+
+//   printf("%c\n", *(p++)); // pós incremento, primeiro printa o valor atual de *p e depois incrementa
+//   printf("%c\n", *p); // Como foi incrementado na linha anterior, printa u
+//   *(p + 1) = 'R'; // Avança para o 3 elemento do vetor e muda para R
+//   printf("%s\n", nome); // printa LuR
+
+//   return 0;
+// } // a) o caractere impresso no primeiro print é L; b) para o segundo elemento do vetor, u; c) u; d) LuR;
+
+// EX 14
+int main(){
+  int valores[3];
+  int *p = valores;
+  scanf("%d", p);
+  printf("%d\n", valores[0]);
+} // a) o comando faz leitura de valores[0], pois o ponteiro p recebeu o endereço de memória do primeiro elemento do vetor, ou seja, valores[0].
