@@ -130,4 +130,48 @@
 // }
 
 // EX 8
-// CONTINUAR AMANHÃ
+// void registrar_venda(int vendidos, int *estoque){
+//     *estoque -= vendidos;
+// }
+
+// int main(){
+//     int estoque, vendidos;
+//     printf("Digite o seu estoque atual: ");
+//     scanf("%d", &estoque);
+//     printf("Digite a quantidade vendida: ");
+//     scanf("%d", &vendidos);
+//     registrar_venda(vendidos, &estoque);
+//     printf("Estoque restante: %d\n", estoque);
+// }
+
+// EX 9 e 10
+// void calcula_clima(float tMin, float tMax, float *pMedia, float *pAmplitude){
+//     *pMedia = (tMin + tMax) / 2;
+//     *pAmplitude = tMax - tMin;
+// }
+
+// float calcula_indice(float tempMedia, float umidade){
+//     float indice = (tempMedia + 0.05) * umidade;
+//     return indice;
+// }
+
+// int main(){
+//     float tMin, tMax, tMedia, amplitudeT, umidade;
+//     printf("Digite a temperatura minima e maxima");
+//     scanf("%f %f", &tMin, &tMax);
+//     calcula_clima(tMin, tMax, &tMedia, &amplitudeT);
+//     printf("Temp media: %.2f, Amplitude termica: %.2f\n", tMedia, amplitudeT);
+//     printf("Digite a umidade: ");
+//     scanf("%f", &umidade);
+//     float indice = calcula_indice(tMedia, umidade);
+//     printf("Indice de desconforto termico: %.2f\n", indice);
+// }
+
+// EX 11
+/*
+Qual das afirmativas abaixo é falsa?
+(a) Se uma função não retorna nenhum valor, ela pode ser declarada como void. V
+(b) O valor retornado por main pode ser utilizado pelo sistema operacional. V
+(c) Arquivos como stdio.h e string.h contêm declarações de funções da biblioteca de C. V
+(d) Em C padrão, uma função pode ser definida dentro de outra função. F
+*/
