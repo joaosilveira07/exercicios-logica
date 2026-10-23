@@ -1,27 +1,83 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *criarVetorDinamico(int tamanho){
-    int *vetor = malloc(tamanho * sizeof(int));;
+// int *criarVetorDinamico(int tamanho){
+//     int *vetor = malloc(tamanho * sizeof(int));
     
-    if (criarVetorDinamico == NULL){
-        printf("Erro: Não foi possível alocar memória.\n");
+//     if (vetor == NULL){
+//         printf("Erro: Não foi possível alocar memória.\n");
+//         return NULL;
+//     }
+
+//     return vetor;
+// }
+
+// void imprimir_preco(int tamanho, int *ptrVetor){
+//     for (int i = 0; i < tamanho; i++){
+//         printf("Item %d\n", i + 1);
+//         printf("Preco: %d\n", ptrVetor[i]);
+//     }
+// }
+
+// void aplicar_reajuste(int *ptrVetor, int tamanho, int porcentagem){
+//     for (int i = 0; i < tamanho; i++){
+//         ptrVetor[i] *= 1 + (porcentagem / 100.0); 
+//     }
+// }
+
+// void desalocar(int **ptrVetor){
+//     free(*ptrVetor);
+//     *ptrVetor = NULL;
+// }
+
+// int main(){
+//     int vetorEstatico[5] = {10, 20, 30, 40, 50};
+//     int *ptrVetorDinamico = criarVetorDinamico(5);
+    
+    
+//     for (int i = 0; i < 5; i++){
+//         ptrVetorDinamico[i] = (i + 1) * 10;
+//     }
+
+//     imprimir_preco(5, ptrVetorDinamico);
+//     aplicar_reajuste(ptrVetorDinamico, 5, 10);
+//     imprimir_preco(5, ptrVetorDinamico);
+//     desalocar(&ptrVetorDinamico);
+//     printf("endereco depois do free: %p\n", ptrVetorDinamico);
+// }
+
+// EX GERADOS POR IA PARA FIXAR
+
+// EX 1
+int *criarVetorAlunos(int qtdAlunos){
+    int *vetor = malloc(qtdAlunos * sizeof(int));
+    if (vetor == NULL){
         return NULL;
     }
 
     return vetor;
 }
 
-void imprimir_preco(int tamanho, int *ptrVetor){
-    for (int i = 0; i < tamanho; i++){
-        printf("Item %d\n", i + 1);
-        printf("Preco: %d\n", ptrVetor[i]);
+void preencherNotas(int *ptrVetor, int qtdAlunos){
+    int vetorNotas[] = {6, 7, 8, 5, 9};
+    for (int i = 0; i < qtdAlunos; i++){
+        ptrVetor[i] = vetorNotas[i];
     }
 }
 
-void aplicar_reajuste(int *ptrVetor, int tamanho, int porcentagem){
-    for (int i = 0; i < tamanho; i++){
-        ptrVetor[i] *= 1 + (porcentagem / 100.0); 
+void imprimirNotas(int *ptrVetor, int qtdAlunos){
+    for (int i = 0; i < qtdAlunos; i++){
+        printf("Aluno: %d\n", i + 1);
+        printf("Nota: %d\n", ptrVetor[i]);
+    }
+}
+
+void aplicarBonus(int *ptrVetor, int qtdAlunos, int valorBonus){
+    for (int i = 0; i < qtdAlunos; i++){
+        ptrVetor[i] += valorBonus;
+        if (ptrVetor[i] > 10){
+            ptrVetor[i] = 10;
+        }
     }
 }
 
@@ -31,17 +87,15 @@ void desalocar(int **ptrVetor){
 }
 
 int main(){
-    int vetorEstatico[5] = {10, 20, 30, 40, 50};
-    int *ptrVetorDinamico = criarVetorDinamico(5);
-    
-    
-    for (int i = 0; i < 5; i++){
-        ptrVetorDinamico[i] = (i + 1) * 10;
-    }
+    int *vetorAlunos = criarVetorAlunos(5);
+    if (vetorAlunos == NULL){
+        return -1;
+    } 
 
-    imprimir_preco(5, ptrVetorDinamico);
-    aplicar_reajuste(ptrVetorDinamico, 5, 10);
-    imprimir_preco(5, ptrVetorDinamico);
-    desalocar(&ptrVetorDinamico);
-    printf("endereco depois do free: %p\n", ptrVetorDinamico);
+    preencherNotas(vetorAlunos, 5);
+    imprimirNotas(vetorAlunos, 5);
+    aplicarBonus(vetorAlunos, 5, 1);
+    imprimirNotas(vetorAlunos, 5);
+    desalocar(&vetorAlunos);
+    printf("endereco depois do free: %p\n", vetorAlunos);
 }
